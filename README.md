@@ -24,7 +24,14 @@ json
 gmaps
 datetime
 requests
+openalpr
 ```
+## Refer:
+For Vehicle Registration Identification
+http://doc.openalpr.com/cloud_api.html
+
+For Google Map Heatmap
+https://github.com/pbugnion/gmaps
 
 ### Implementation
 
