@@ -51,13 +51,13 @@ Analyzing the data includes finding Heatmaps, Wordcloud, and implementing differ
 
 ## Authors
 
-* **Saksham Gupta** - *Initial work* - [PurpleBooth](https://github.com/shucon)
-* **Kushagra Nagori** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Kalpit Pokra** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Madhur Garg** - *Initial work* - [PurpleBooth](https://github.com/madhur96)
-* **Vikrant Deshmukh** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Saksham Gupta** - [shucon](https://github.com/shucon)
+* **Kushagra Nagori** - [kushagra189](https://github.com/kushagra189)
+* **Kalpit Pokra** - [kalpit4088](https://github.com/kalpit4088)
+* **Madhur Garg** - [madhur96](https://github.com/madhur96)
+* **Vikrant Deshmukh** - [vikrant1697](https://github.com/vikrant1697)
 
 ## Acknowledgments
 
-* This project is a part of BDP (Big data and policing) course under "Ponnurangam Kumaraguru" faculty.
+* This project is a part of BDP (Big data and policing) course under "Prof. Ponnurangam Kumaraguru".
 
