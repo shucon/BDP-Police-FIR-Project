@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Identification of Stolen Velhicles</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1>Identification of Stolen Vehicles</h1>
+      <p>Upload a photo of number plate of the car you think could be stolen, we will check it in the database and tell the results.</p>
+      <p>Check more at: <a href="https://github.com/shucon/BDP-Police-FIR-Project">Git-hub </a></p>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container text-center">
+      <div class="col-sm-12">
+        <div class="form">
+          <h1>Upload a photo!</h1>
+
+           <!-- IMAGE UPLOAD FORM -->
+          <form action="/upload" enctype="multipart/form-data" method="POST">
+
+                <div class="section">Note: Only image files are allowed.</div>
+                <div class="inner-wrap">
+                  <label>
+                      <input type="file" name="image">
+                  </label>
+                  <div class="button-section">
+                      <input type="submit" value="Upload your image">
+                  </div>
+                </div>
+
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+  </div>
+</body>
+</html>
