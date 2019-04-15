@@ -1,8 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+</head>
+<body>
+	<div class="jumbotron">
+      <div class="container text-center">
+        <h1>Identification of Stolen Vehicles</h1>
+        <p>{{ title }}</p>
+      </div>
+    </div>
 <div id="map"></div>
 <!-- Replace the value of the key parameter with your own API key. --> <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA58mCP9z4lqtmqj9m_r6PkkndsUPg_kkc&callback=initMap"> </script>
-<div class="container text-center">
+<!-- <div class="container text-center">
 <input type="button" value="Back to Home page" class="btn btn-danger" align="middle" onclick="window.location.href='/'" />
-</div>
+</div> -->
 <style>
 #map { height: 90%; } /* Optional: Makes the sample page fill the window. */ html, body { height: 100%; margin: 0; padding: 0; }
 </style>
@@ -11,3 +27,13 @@ function initMap() { var map = new google.maps.Map(document.getElementById('map'
 	console.log(layer);
 }
 </script>
+</body>
+<footer>
+<div class="jumbotron">
+    <div class="container text-center">     
+      <br>
+      <input type="button" value="Back to Home page" class="btn btn-danger" onclick="window.location.href='/'" />
+    </div>
+</div>
+</footer>
+</html>

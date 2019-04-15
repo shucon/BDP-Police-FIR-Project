@@ -55,41 +55,26 @@
      );
     </script>
   </div>
-<br />
-<br />
-<br />
-  <div class="container-fluid" style="border:1px solid #cecece;" align="right">
-    <canvas id="chart1" width="600" height="400"></canvas>
-    <script>
-      var pieData = [
-        {% for item, label, colors in set %}
-          {
-            value: {{item}},
-            label: "{{label}}",
-            color : "{{colors}}"
-          },
-        {% endfor %}
-      ];
-      // get bar chart canvas
-      var oilCanvas = document.getElementById("chart1");
-
-      Chart.defaults.global.defaultFontFamily = "Lato";
-      Chart.defaults.global.defaultFontSize = 18;
-
-      var mychart = document.getElementById("chart1").getContext("2d");
-      steps = 10
-      max = {{ max }}
-      // draw pie chart
-      new Chart(document.getElementById("chart1").getContext("2d")).Pie(pieData);
-    </script>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <p>The above anaylsis shows the day wise frequency of the motor vehicle thefts.</p>
+    <p>
+      <ul>
+        <li>Sunday shows the least number recorded as it was a holiday and people were more focused.</li>
+        <li>The week days represent quite similar results while there is a decrease during the weekends.</li>
+        <li>According to our analysis, it is easier during the weekdays since lesser number of people are there at public places.</li>
+      </ul>
+    </p>
   </div>
   <div class="jumbotron">
-      <div class="container text-center">     
-        <br>
-        <input type="button" value="Back to Home page" class="btn btn-danger" onclick="window.location.href='/'" />
-      </div>
+    <div class="container text-center">     
       <br>
-      <br>
-  </div>
+      <input type="button" value="Back to Home page" class="btn btn-danger" onclick="window.location.href='/'" />
+    </div>
+    <br>
+    <br>
+</div>
 </body>
 </html>
