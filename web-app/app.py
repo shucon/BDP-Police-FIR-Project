@@ -54,18 +54,18 @@ def upload_file():
     if name[1]!='jpg':
         im = Image.open(file)
         rgb_im = im.convert('RGB')
-        rgb_im.save('/home/madhur/BDP-Police-FIR-Project/web-app/uploads/car.jpg')
+        rgb_im.save(UPLOAD_FOLDER+'/car.jpg')
     else:
         name[0]='car'
         name=name[0]+'.'+name[1]
         im = Image.open(file)
-        im.save('/home/madhur/BDP-Police-FIR-Project/web-app/uploads/car.jpg')
+        im.save(UPLOAD_FOLDER+'/car.jpg')
     
-    fd = open('/home/madhur/BDP-Police-FIR-Project/data.csv', 'r')
+    fd = open(UPLOAD_FOLDER+'/../../data.csv', 'r')
     df = pd.read_csv(fd)
     # f = os.path.join(app.config['UPLOAD_FOLDER'], 'car.jpg')
     # file.save(f)
-    IMAGE_PATH = '/home/madhur/BDP-Police-FIR-Project/web-app/uploads/car.jpg'
+    IMAGE_PATH = UPLOAD_FOLDER+'/car.jpg'
     SECRET_KEY = 'sk_9791a1be475cae14e87a2abf'
     with open(IMAGE_PATH, 'rb') as image_file:
         img_base64 = base64.b64encode(image_file.read())
