@@ -3,13 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <title>{{ title }}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
 </head>
 
 <body>
-  <center>
-    <h1>{{ title }}</h1>
-  </center>
+  <div class="jumbotron">
+      <div class="container text-center">
+        <h1>Identification of Stolen Vehicles</h1>
+        <p>{{ title }}</p>
+      </div>
+    </div>
   <div class="container-fluid" style="border:1px solid #cecece;" align="center">
     <canvas id="chart" width="600" height="400"></canvas>
     <script>
@@ -50,5 +55,14 @@
      );
     </script>
   </div>
+  
+<div class="jumbotron">
+    <div class="container text-center">     
+      <br>
+      <input type="button" value="Back to Home page" class="btn btn-danger" onclick="window.location.href='/'" />
+    </div>
+    <br>
+    <br>
+</div>
 </body>
 </html>

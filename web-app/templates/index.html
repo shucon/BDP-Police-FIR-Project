@@ -4,55 +4,63 @@
   <title>Identification of Stolen Velhicles</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./styles/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body background="{{ url_for('static', filename='map.png') }}">
   <div class="jumbotron">
     <div class="container text-center">
       <h1>Identification of Stolen Vehicles</h1>
       <p>Upload a photo of number plate of the car you think could be stolen, we will check it in the database and tell the results.</p>
-      <p>Check more at: <a href="https://github.com/shucon/BDP-Police-FIR-Project">Git-hub </a></p>
     </div>
   </div>
 
-  <nav class="navbar navbar-inverse">
+  <!-- <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
 
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <div class="container text-center">
       <div class="col-sm-12">
+        <br>
+        <br>
         <div class="form">
           <h1>Upload a photo!</h1>
-
-           <!-- IMAGE UPLOAD FORM -->
-          <form action="/upload" enctype="multipart/form-data" method="POST">
-
+            <!-- IMAGE UPLOAD FORM -->
+            <form action="/upload" enctype="multipart/form-data" method="POST">
                 <div class="section">Note: Only image files are allowed.</div>
+                <br>
                 <div class="inner-wrap">
                   <label>
                       <input type="file" name="image">
                   </label>
-                  <div class="button-section">
-                      <input type="submit" value="Upload your image">
-                  </div>
+                  <br>
+                <button type="submit" class="btn btn-primary">Upload Image</button>
                 </div>
-
-            </div>
-          </form>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-  </div>
-  <div class="container">
+    </div>
+
+  <div class="jumbotron">
+    <div class="container text-center">     
+      <br>
+      <input type="button" value="Day Analysis" class="btn btn-success" onclick="window.location.href='/day_analysis'" />
+      <input type="button" value="Date Analysis" class="btn btn-danger"  onclick="window.location.href='/date_analysis'" />
+      <input type="button" value="Vehicle Analysis" class="btn btn-warning" onclick="window.location.href='/vehicle_type'" />
+      <input type="button" value="Heat Map" class="btn btn-danger"  onclick="window.location.href='/heatmap'" />
+      <input type="button" value="Festival Analysis" class="btn btn-success" onclick="window.location.href='/festival'" />
+    <br>
+      <p>Check our <a href="">blog</a> and <a href="">video</a></p>
+      <p>Code for our work available at: <a href="https://github.com/shucon/BDP-Police-FIR-Project">Git-hub </a></p>
+    </div>
   </div>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+</head>
+
+<body>
+  <div class="jumbotron">
+      <div class="container text-center">
+        <h1>Identification of Stolen Vehicles</h1>
+        <p>{{ title }}</p>
+      </div>
+    </div>
+  <div class="container text-center">
+  <img src="{{ url_for('static', filename='car.jpg') }}" style="float:left;width:580px;height:550px;"/>
+  <p><h3>Stolen Status :</h3>{{values[0]}}</p>
+  <p><h3>Car Number :</h3>{{values[1]}}</p>
+  <p><h3>Color of car :</h3>{{values[2]}}</p>
+  <p><h3>Car type :</h3>{{values[4]}}</p>
+  <p><h3>Year of manufacturing :</h3>{{values[5]}}</p>
+  <p><h3>Car Name :</h3>{{values[6]}}</p>
+  <p><h3>Car company :</h3>{{values[3]}}</p>
+  </div>
+<div class="jumbotron">
+    <div class="container text-center">     
+      <br>
+      <input type="button" value="Back to Home page" class="btn btn-danger" onclick="window.location.href='/'" />
+    </div>
+    <br>
+    <br>
+</div>
+</body>
+</html>
